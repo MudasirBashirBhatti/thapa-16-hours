@@ -31,3 +31,12 @@ sendEmail('john@gmail.com')("describing info")('this is body text')
 let dev1Task = sendEmail(`"mudasir@gmail.com"`)  //first dev task is to finds and attach email with function
 let dev2Task = dev1Task(`"this is subject"`) // second dev will attach subject for this email
 dev2Task(`"this is body"`)
+
+// ..............
+// With currying, you can fix one of the arguments to create a more specific (specialized) function.
+const multiply = a => b => a * b
+const multiplyBy2 = multiply(2)
+const multiplyBy3 = multiply(3)
+
+console.log(multiplyBy2(6));  //print 12
+console.log(multiplyBy3(6));  //print 18
